@@ -9,6 +9,10 @@ public class LogUtils {
         System.out.println(msg);
     }
 
+    public static void d(String format, Object... args) {
+        d(String.format(format, args));
+    }
+
     public static void d(Object object) {
         if (object == null) {
             d("null");
@@ -20,6 +24,7 @@ public class LogUtils {
         }
         d(object.toString());
     }
+
 
     public static void d(Object[] array) {
         StringBuilder stringBuilder = new StringBuilder();
