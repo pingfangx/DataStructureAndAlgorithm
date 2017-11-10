@@ -170,4 +170,13 @@ public class DataBuilder {
         this.print = true;
         return this;
     }
+
+    public static Object[] buildSString(String string) {
+        Object[] result = new Object[string.length() + 1];
+        result[0] = string.length();
+        for (int i = 0; i < string.length(); i++) {
+            result[i + 1] = string.charAt(i);
+        }
+        return result;
+    }
 }

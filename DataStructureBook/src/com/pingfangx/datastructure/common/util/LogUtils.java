@@ -19,6 +19,7 @@ public class LogUtils {
             return;
         }
         if (object.getClass().isArray()) {
+            //这里有问题，其本类型数组不可以直接转的
             d((Object[]) object);
             return;
         }
