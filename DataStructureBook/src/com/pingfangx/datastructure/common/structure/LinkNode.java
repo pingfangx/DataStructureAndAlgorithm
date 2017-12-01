@@ -12,4 +12,9 @@ public class LinkNode {
         this.data = data;
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return this.data.toString();
+    }
 }
