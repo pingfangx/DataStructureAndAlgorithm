@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_main.iml" group="DataStructureAndAlgorithm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_test.iml" group="DataStructureAndAlgorithm" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" group="DataStructureBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" group="DataStructureBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" group="DataStructureBook" />
+    </modules>
+  </component>
+</project>
