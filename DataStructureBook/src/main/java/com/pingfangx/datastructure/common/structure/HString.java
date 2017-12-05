@@ -47,15 +47,15 @@ public class HString {
     }
 
     public HString sub(int pos, int len) {
-        if (pos < 0 || pos > length || len < 0 || len > length - pos + 1) {
+        if (pos < 0 || pos >= length || len < 0 || len > length - pos) {
             return null;
         }
         HString string = new HString("");
         if (len == 0) {
-            string.ch = null;
+            string.ch = new char[0];
             string.length = 0;
         } else {
-            string.ch = new char[len - pos + 1];
+            string.ch = new char[len];
             System.arraycopy(ch, pos, string.ch, 0, len);
             string.length = len;
         }
@@ -65,5 +65,22 @@ public class HString {
     @Override
     public String toString() {
         return length + ":" + Arrays.toString(ch);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HString string = (HString) o;
+
+        return length == string.length && Arrays.equals(ch, string.ch);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = length;
+        result = 31 * result + Arrays.hashCode(ch);
+        return result;
     }
 }
