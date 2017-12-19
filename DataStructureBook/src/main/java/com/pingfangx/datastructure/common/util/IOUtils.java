@@ -1,12 +1,24 @@
 package com.pingfangx.datastructure.common.util;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * @author pingfangx
  * @date 2017/11/6
  */
 public class IOUtils {
+
+    public static int getInt(String msg) {
+        LogUtils.d(msg);
+        return getInt();
+    }
+
+    public static int getInt() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
     public static char getChar() {
         char r;
         try {
