@@ -1,4 +1,4 @@
-package com.pingfangx.datastructure.common.structure;
+package com.pingfangx.datastructure.book01.chapter02;
 
 import java.util.ArrayList;
 

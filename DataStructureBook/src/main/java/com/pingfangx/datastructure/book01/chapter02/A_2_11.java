@@ -1,7 +1,5 @@
 package com.pingfangx.datastructure.book01.chapter02;
 
-import com.pingfangx.datastructure.common.structure.LinkList;
-import com.pingfangx.datastructure.common.structure.LinkNode;
 import com.pingfangx.datastructure.common.util.IOUtils;
 import com.pingfangx.datastructure.common.util.LogUtils;
 

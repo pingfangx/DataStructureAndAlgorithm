@@ -1,6 +1,7 @@
-package com.pingfangx.datastructure.common.util;
+package com.pingfangx.datastructure.book01.common;
 
-import com.pingfangx.datastructure.common.structure.*;
+import com.pingfangx.datastructure.book01.chapter02.*;
+import com.pingfangx.datastructure.common.util.LogUtils;
 
 import java.util.Random;
 

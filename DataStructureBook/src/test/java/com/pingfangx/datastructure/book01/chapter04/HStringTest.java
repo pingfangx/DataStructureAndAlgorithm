@@ -1,4 +1,4 @@
-package com.pingfangx.datastructure.common.structure;
+package com.pingfangx.datastructure.book01.chapter04;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -10,7 +10,7 @@ import org.junit.Test;
  *
  * @author pingfangx
  * @version 1.0
- * @since <pre>12/01/2017</pre>
+ * @since <pre>12/20/2017</pre>
  */
 public class HStringTest {
 
@@ -58,5 +58,6 @@ public class HStringTest {
         Assert.assertEquals(string.sub(0, 1), new HString("1"));
         Assert.assertEquals(string.sub(4, 1), new HString("5"));
     }
+
 
 } 

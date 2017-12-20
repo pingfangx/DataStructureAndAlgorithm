@@ -1,6 +1,5 @@
 package com.pingfangx.datastructure.book01.chapter03;
 
-import com.pingfangx.datastructure.common.structure.Stack;
 import com.pingfangx.datastructure.common.util.LogUtils;
 
 import java.io.IOException;

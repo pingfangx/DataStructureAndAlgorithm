@@ -1,7 +1,6 @@
 package com.pingfangx.datastructure.book01.chapter04;
 
-import com.pingfangx.datastructure.common.constant.STATUS;
-import com.pingfangx.datastructure.common.structure.HString;
+import com.pingfangx.datastructure.book01.common.STATUS;
 import com.pingfangx.datastructure.common.util.LogUtils;
 
 /**

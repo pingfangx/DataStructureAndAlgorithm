@@ -1,4 +1,4 @@
-package com.pingfangx.datastructure.common.structure;
+package com.pingfangx.datastructure.book01.chapter04;
 
 import java.util.Arrays;
 

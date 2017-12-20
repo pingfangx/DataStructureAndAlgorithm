@@ -1,6 +1,5 @@
 package com.pingfangx.datastructure.book01.chapter05;
 
-import com.pingfangx.datastructure.common.structure.ElemType;
 import com.pingfangx.datastructure.common.util.IOUtils;
 import com.pingfangx.datastructure.common.util.LogUtils;
 

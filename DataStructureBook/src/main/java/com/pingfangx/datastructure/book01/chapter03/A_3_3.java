@@ -1,6 +1,6 @@
 package com.pingfangx.datastructure.book01.chapter03;
 
-import com.pingfangx.datastructure.common.constant.STATUS;
+import com.pingfangx.datastructure.book01.common.STATUS;
 
 import java.util.Stack;
 

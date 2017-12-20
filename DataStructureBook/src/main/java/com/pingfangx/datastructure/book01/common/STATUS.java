@@ -1,4 +1,4 @@
-package com.pingfangx.datastructure.common.constant;
+package com.pingfangx.datastructure.book01.common;
 
 /**
  * @author pingfangx

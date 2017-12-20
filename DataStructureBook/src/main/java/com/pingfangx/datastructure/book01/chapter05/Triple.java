@@ -1,7 +1,5 @@
 package com.pingfangx.datastructure.book01.chapter05;
 
-import com.pingfangx.datastructure.common.structure.ElemType;
-
 /**
  * 三元组
  *

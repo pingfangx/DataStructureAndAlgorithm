@@ -1,4 +1,4 @@
-package com.pingfangx.datastructure.common.structure;
+package com.pingfangx.datastructure.book01.chapter02;
 
 /**
  * 静态链表，使用数组来描述

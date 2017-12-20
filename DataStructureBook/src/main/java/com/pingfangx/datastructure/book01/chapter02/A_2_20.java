@@ -1,8 +1,6 @@
 package com.pingfangx.datastructure.book01.chapter02;
 
-import com.pingfangx.datastructure.common.constant.STATUS;
-import com.pingfangx.datastructure.common.structure.LinkList;
-import com.pingfangx.datastructure.common.structure.LinkNode;
+import com.pingfangx.datastructure.book01.common.STATUS;
 
 /**
  * 改写自 2.9

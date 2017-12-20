@@ -1,7 +1,5 @@
 package com.pingfangx.datastructure.book01.chapter05;
 
-import com.pingfangx.datastructure.common.structure.ElemType;
-
 /**
  * @author pingfangx
  * @date 2017/12/18

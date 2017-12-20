@@ -1,7 +1,6 @@
 package com.pingfangx.datastructure.book01.chapter02;
 
-import com.pingfangx.datastructure.common.structure.List;
-import com.pingfangx.datastructure.common.util.DataBuilder;
+import com.pingfangx.datastructure.book01.common.DataBuilder;
 import com.pingfangx.datastructure.common.util.LogUtils;
 
 /**
