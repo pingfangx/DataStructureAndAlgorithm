@@ -16,6 +16,13 @@ public class List {
         mList = new ArrayList<>();
     }
 
+    public List(int[] data) {
+        this();
+        for (int i : data) {
+            mList.add(i);
+        }
+    }
+
     public void add(int index, int element) {
         mList.add(index, element);
     }

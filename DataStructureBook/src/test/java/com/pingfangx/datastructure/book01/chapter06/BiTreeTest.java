@@ -52,7 +52,7 @@ public class BiTreeTest {
     public void testBuildByList() throws Exception {
         List list = new List();
         for (int i = 0; i < 64; i++) {
-            list.add(i, i);
+            list.add(i, i + 1);
         }
         LogUtils.d(BiTree.buildByList(list));
         list.set(26, -1);

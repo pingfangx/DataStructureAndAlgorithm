@@ -46,9 +46,13 @@ public class BiTree {
         List list = new List();
         //多加了0
         for (int i = 0; i <= nodeNumber; i++) {
-            list.add(i, i);
+            list.add(i, i + 1);
         }
         return buildByList(list);
+    }
+
+    public static BiTree buildByArray(int[] data) {
+        return buildByList(new List(data));
     }
 
     /**
@@ -56,7 +60,7 @@ public class BiTree {
      * 约定若结点值为负表示没有结点，可用来创建普通二叉树
      */
     public static BiTree buildByList(List data) {
-        return buildByList(data, 1);
+        return buildByList(data, 0);
     }
 
     private static BiTree buildByList(List data, int index) {
@@ -68,8 +72,9 @@ public class BiTree {
         }
         BiTree biTree = new BiTree();
         biTree.data = data.get(index);
-        biTree.lchild = buildByList(data, index * 2);
-        biTree.rchild = buildByList(data, index * 2 + 1);
+        //因为实际位置是 index+1 ，*2 得到位置，要 索引还需 -1
+        biTree.lchild = buildByList(data, (index + 1) * 2 - 1);
+        biTree.rchild = buildByList(data, (index + 1) * 2);
         return biTree;
     }
 
@@ -171,7 +176,7 @@ public class BiTree {
      * 填充列表，第0个元素留空，其余对应
      *
      * @param result 结果列表
-     * @param index index
+     * @param index  index
      */
     public void fillList(List result, int index) {
         while (index >= result.length()) {

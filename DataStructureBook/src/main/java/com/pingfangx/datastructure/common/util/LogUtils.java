@@ -1,5 +1,7 @@
 package com.pingfangx.datastructure.common.util;
 
+import java.util.Arrays;
+
 /**
  * @author pingfangx
  * @date 2017/11/3
@@ -20,7 +22,11 @@ public class LogUtils {
         }
         if (object.getClass().isArray()) {
             //这里有问题，其本类型数组不可以直接转的
-            d((Object[]) object);
+            if (object.getClass().getComponentType().equals(int.class)) {
+                d(Arrays.toString((int[]) object));
+            } else {
+                d((Object[]) object);
+            }
             return;
         }
         d(object.toString());
