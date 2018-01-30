@@ -89,7 +89,7 @@ import java.io.InvalidObjectException;
 
 public class HashSet<E>
         extends AbstractSet<E>
-        implements Set<E>, Cloneable, java.io.Serializable {
+        implements Cloneable, java.io.Serializable {
     static final long serialVersionUID = -5024744406713321676L;
 
     private transient HashMap<E, Object> map;

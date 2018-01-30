@@ -132,8 +132,7 @@ import java.util.function.Consumer;
  * @since 1.2
  */
 public class WeakHashMap<K, V>
-        extends AbstractMap<K, V>
-        implements Map<K, V> {
+        extends AbstractMap<K, V> {
 
     /**
      * The default initial capacity -- MUST be a power of two.

@@ -158,8 +158,7 @@ import java.util.function.Consumer;
  * @since 1.4
  */
 public class LinkedHashMap<K, V>
-        extends HashMap<K, V>
-        implements Map<K, V> {
+        extends HashMap<K, V> {
 
     /*
      * Implementation note.  A previous version of this class was

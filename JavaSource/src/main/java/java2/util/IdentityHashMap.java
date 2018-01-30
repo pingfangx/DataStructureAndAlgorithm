@@ -139,7 +139,7 @@ import java.util.function.Consumer;
 
 public class IdentityHashMap<K, V>
         extends AbstractMap<K, V>
-        implements Map<K, V>, java.io.Serializable, Cloneable {
+        implements java.io.Serializable, Cloneable {
     /**
      * The initial capacity used by the no-args constructor.
      * MUST be a power of two.  The value 32 corresponds to the

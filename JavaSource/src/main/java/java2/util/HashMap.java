@@ -136,7 +136,7 @@ import java.util.function.Function;
  * @since 1.2
  */
 public class HashMap<K, V> extends AbstractMap<K, V>
-        implements Map<K, V>, Cloneable, Serializable {
+        implements Cloneable, Serializable {
 
     private static final long serialVersionUID = 362498820763181265L;
 

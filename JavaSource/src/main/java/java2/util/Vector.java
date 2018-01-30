@@ -82,7 +82,7 @@ import java.util.function.UnaryOperator;
  */
 public class Vector<E>
         extends AbstractList<E>
-        implements List<E>, RandomAccess, Cloneable, java.io.Serializable {
+        implements RandomAccess, Cloneable, java.io.Serializable {
     /**
      * The array buffer into which the components of the vector are
      * stored. The capacity of the vector is the length of this array buffer,
