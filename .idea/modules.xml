@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" group="DataStructureBook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" group="DataStructureBook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" group="DataStructureBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource.iml" group="JavaSource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" group="JavaSource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_test.iml" group="JavaSource" />
     </modules>
   </component>
 </project>
