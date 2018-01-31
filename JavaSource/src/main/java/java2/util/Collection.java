@@ -25,6 +25,8 @@
 
 package java2.util;
 
+import java2.lang.Iterable;
+
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
