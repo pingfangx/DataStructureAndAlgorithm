@@ -3,12 +3,14 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="0.0" y="0.0">java2.util.Collection</node>
+    <node x="0.0" y="0.0">java.util.ArrayList</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="1.0" x="767.0" y="365.0" />
+  <SelectedNodes>
+    <node>java.util.ArrayList</node>
+  </SelectedNodes>
   <Categories>
     <Category>Methods</Category>
   </Categories>

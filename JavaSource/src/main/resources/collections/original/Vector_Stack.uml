@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="78.5" y="1208.0">java.util.Stack</node>
+    <node x="0.0" y="0.0">java.util.Vector</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.Stack" target="java.util.Vector">
+      <point x="0.0" y="-73.0" />
+      <point x="0.0" y="579.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="44.0" y="-184.0" />
+  <SelectedNodes>
+    <node>java.util.Stack</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

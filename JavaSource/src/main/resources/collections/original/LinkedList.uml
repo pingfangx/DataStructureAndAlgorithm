@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="30.0" y="81.0">java.util.AbstractList</node>
+    <node x="198.0" y="162.0">java.util.Deque</node>
+    <node x="0.0" y="162.0">java.util.AbstractSequentialList</node>
+    <node x="106.67857142857146" y="0.0">java.util.List</node>
+    <node x="134.0" y="243.0">java.util.LinkedList</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.AbstractSequentialList" target="java.util.AbstractList">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.Deque">
+      <point x="35.66666666666666" y="-15.5" />
+      <point x="223.16666666666669" y="218.0" />
+      <point x="242.0" y="218.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="java.util.AbstractList" target="java.util.List">
+      <point x="0.0" y="-15.5" />
+      <point x="88.5" y="56.0" />
+      <point x="123.92857142857146" y="56.0" />
+      <point x="-17.25" y="15.5" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.List">
+      <point x="0.0" y="-15.5" />
+      <point x="187.5" y="56.0" />
+      <point x="158.42857142857144" y="56.0" />
+      <point x="17.24999999999997" y="15.5" />
+    </edge>
+    <edge source="java.util.LinkedList" target="java.util.AbstractSequentialList">
+      <point x="-35.66666666666666" y="-15.5" />
+      <point x="151.83333333333337" y="218.0" />
+      <point x="88.5" y="218.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3293201133144476" x="326.0408602150537" y="1522.0" />
+  <SelectedNodes>
+    <node>java.util.List</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

@@ -27,6 +27,10 @@ package java2.util;
 
 import sun.misc.SharedSecrets;
 
+import java.util.Arrays;
+import java.util.ConcurrentModificationException;
+import java.util.Objects;
+import java.util.RandomAccess;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.UnaryOperator;
