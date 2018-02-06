@@ -62,7 +62,6 @@ package java2.util;
  * @since 1.5
  */
 public abstract class AbstractQueue<E>
-        extends AbstractCollection<E>
         implements Queue<E> {
 
     /**

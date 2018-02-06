@@ -68,7 +68,7 @@ package java2.util;
  * @since 1.2
  */
 
-public abstract class AbstractList<E> extends AbstractCollection<E> implements List<E> {
+public abstract class AbstractList<E> implements List<E> {
     /**
      * Sole constructor.  (For invocation by subclass constructors, typically
      * implicit.)

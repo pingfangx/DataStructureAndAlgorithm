@@ -3,173 +3,153 @@
   <ID>JAVA</ID>
   <OriginalElement>java2.util.ArrayList</OriginalElement>
   <nodes>
-    <node x="157.0" y="651.0">java2.util.EnumMap</node>
-    <node x="1459.7373511904761" y="251.0">java2.util.Deque</node>
-    <node x="1261.9873511904761" y="251.0">java2.util.AbstractQueue</node>
-    <node x="1341.0" y="332.0">java2.util.ArrayDeque</node>
-    <node x="1015.4970238095239" y="413.0">java2.util.LinkedList</node>
-    <node x="595.0" y="732.0">java2.util.LinkedHashMap</node>
-    <node x="293.0" y="570.0">java2.util.AbstractMap</node>
-    <node x="491.5" y="413.0">java2.util.LinkedHashSet</node>
-    <node x="1389.8623511904761" y="160.0">java2.util.Queue</node>
-    <node x="646.5" y="413.0">java2.util.Stack</node>
-    <node x="10.0" y="251.0">java2.util.SortedSet</node>
-    <node x="614.0" y="651.0">java2.util.HashMap</node>
-    <node x="167.5" y="413.0">java2.util.RegularEnumSet</node>
-    <node x="510.5" y="332.0">java2.util.HashSet</node>
-    <node x="10.0" y="570.0">java2.util.SortedMap</node>
-    <node x="317.67485119047615" y="251.0">java2.util.AbstractSet</node>
-    <node x="871.0" y="332.0">java2.util.AbstractSequentialList</node>
-    <node x="445.0" y="651.0">java2.util.IdentityHashMap</node>
-    <node x="302.74702380952385" y="332.0">java2.util.EnumSet</node>
-    <node x="286.0" y="651.0">java2.util.WeakHashMap</node>
-    <node x="737.25" y="160.0">java2.util.List</node>
-    <node x="55.32051282051282" y="732.0">java2.util.TreeMap</node>
-    <node x="740.0" y="651.0">java2.util.Properties</node>
-    <node x="1059.7470238095239" y="160.0">java2.util.AbstractCollection</node>
-    <node x="251.9873511904762" y="160.0">java2.util.Set</node>
-    <node x="0.0" y="651.0">java2.util.NavigableMap</node>
-    <node x="53.5" y="413.0">java2.util.TreeSet</node>
-    <node x="784.8005952380953" y="251.0">java2.util.AbstractList</node>
-    <node x="317.0" y="489.0">java2.util.Map</node>
-    <node x="643.0" y="332.0">java2.util.Vector</node>
-    <node x="0.0" y="332.0">java2.util.NavigableSet</node>
-    <node x="741.0" y="570.0">java2.util.Hashtable</node>
-    <node x="751.0" y="332.0">java2.util.ArrayList</node>
-    <node x="1192.0" y="332.0">java2.util.PriorityQueue</node>
-    <node x="911.6875" y="79.0">java2.util.Collection</node>
-    <node x="332.5" y="413.0">java2.util.JumboEnumSet</node>
+    <node x="446.0" y="717.0">java2.util.EnumMap</node>
+    <node x="1232.5" y="317.0">java2.util.Deque</node>
+    <node x="1064.5" y="317.0">java2.util.AbstractQueue</node>
+    <node x="725.0" y="798.0">java2.util.LinkedHashMap</node>
+    <node x="1217.0" y="398.0">java2.util.ArrayDeque</node>
+    <node x="786.0" y="479.0">java2.util.LinkedList</node>
+    <node x="438.0" y="636.0">java2.util.AbstractMap</node>
+    <node x="491.49999999999994" y="479.0">java2.util.LinkedHashSet</node>
+    <node x="1149.599358974359" y="236.0">java2.util.Queue</node>
+    <node x="10.0" y="317.0">java2.util.SortedSet</node>
+    <node x="646.5" y="479.0">java2.util.Stack</node>
+    <node x="167.49999999999994" y="479.0">java2.util.RegularEnumSet</node>
+    <node x="744.0" y="717.0">java2.util.HashMap</node>
+    <node x="510.49999999999994" y="398.0">java2.util.HashSet</node>
+    <node x="10.0" y="636.0">java2.util.SortedMap</node>
+    <node x="263.0" y="317.0">java2.util.AbstractSet</node>
+    <node x="751.0" y="398.0">java2.util.AbstractSequentialList</node>
+    <node x="575.0" y="717.0">java2.util.IdentityHashMap</node>
+    <node x="258.7980769230769" y="398.0">java2.util.EnumSet</node>
+    <node x="287.0" y="717.0">java2.util.WeakHashMap</node>
+    <node x="805.0" y="236.0">java2.util.List</node>
+    <node x="97.19230769230768" y="798.0">java2.util.TreeMap</node>
+    <node x="156.0" y="717.0">java2.util.Properties</node>
+    <node x="272.5" y="236.0">java2.util.AbstractCollection</node>
+    <node x="46.5" y="236.0">java2.util.Set</node>
+    <node x="0.0" y="717.0">java2.util.NavigableMap</node>
+    <node x="53.5" y="479.0">java2.util.TreeSet</node>
+    <node x="781.0" y="317.0">java2.util.AbstractList</node>
+    <node x="643.0" y="398.0">java2.util.Vector</node>
+    <node x="0.0" y="398.0">java2.util.NavigableSet</node>
+    <node x="172.5" y="555.0">java2.util.Map</node>
+    <node x="157.0" y="636.0">java2.util.Hashtable</node>
+    <node x="948.0" y="398.0">java2.util.ArrayList</node>
+    <node x="1068.0" y="398.0">java2.util.PriorityQueue</node>
+    <node x="513.25" y="155.0">java2.util.Collection</node>
+    <node x="332.49999999999994" y="479.0">java2.util.JumboEnumSet</node>
   </nodes>
   <notes>
-    <note x="859.1875" y="0.0">
+    <note x="430.75" y="0.0">
       <node>java2.util.Collection</node>
-      <value>集合框架图，删除了一些继承的接口</value>
+      <value>集合框架图，删除了一些继承的接口\nAbstractList\nAbstractQueue、ArrayDeque\nAbstractSet\n都继承了 AbstractCollection ，图中不再标明</value>
       <edge>
         <point x="0.0" y="-15.5" />
-        <point x="0.0" y="14.5" />
-      </edge>
-    </note>
-    <note x="1068.0" y="333.0">
-      <node>java2.util.LinkedList</node>
-      <value>还实现了 Deque</value>
-      <edge>
-        <point x="26.75" y="-15.5" />
-        <point x="1095.7470238095239" y="388.0" />
-        <point x="1120.0" y="388.0" />
-        <point x="0.0" y="14.5" />
+        <point x="0.0" y="52.5" />
       </edge>
     </note>
   </notes>
   <edges>
     <edge source="java2.util.IdentityHashMap" target="java2.util.AbstractMap">
       <point x="0.0" y="-15.5" />
-      <point x="519.5" y="631.0" />
-      <point x="380.5" y="631.0" />
+      <point x="649.5" y="697.0" />
+      <point x="525.5" y="697.0" />
       <point x="25.0" y="15.5" />
+    </edge>
+    <edge source="java2.util.AbstractQueue" target="java2.util.Queue">
+      <point x="0.0" y="-15.5" />
+      <point x="1132.5" y="292.0" />
+      <point x="1171.599358974359" y="292.0" />
+      <point x="-22.0" y="15.5" />
     </edge>
     <edge source="java2.util.HashSet" target="java2.util.AbstractSet">
       <point x="0.0" y="-15.5" />
-      <point x="559.0" y="312.0" />
-      <point x="414.3415178571429" y="312.0" />
-      <point x="38.66666666666674" y="15.5" />
-    </edge>
-    <edge source="java2.util.AbstractQueue" target="java2.util.Queue">
-      <point x="34.0" y="-15.5" />
-      <point x="1363.9873511904761" y="231.0" />
-      <point x="1411.8623511904761" y="231.0" />
-      <point x="-22.0" y="15.5" />
+      <point x="559.0" y="373.0" />
+      <point x="359.66666666666663" y="373.0" />
+      <point x="38.66666666666663" y="15.5" />
     </edge>
     <edge source="java2.util.Set" target="java2.util.Collection">
       <point x="0.0" y="-15.5" />
-      <point x="285.9873511904762" y="130.0" />
-      <point x="925.0625" y="130.0" />
+      <point x="80.5" y="206.0" />
+      <point x="526.625" y="206.0" />
       <point x="-40.125" y="15.5" />
     </edge>
     <edge source="java2.util.SortedSet" target="java2.util.Set">
       <point x="0.0" y="-15.5" />
-      <point x="63.5" y="231.0" />
-      <point x="268.9873511904762" y="231.0" />
       <point x="-17.0" y="15.5" />
     </edge>
     <edge source="java2.util.JumboEnumSet" target="java2.util.EnumSet">
       <point x="0.0" y="-15.5" />
-      <point x="402.0" y="388.0" />
-      <point x="377.74702380952385" y="388.0" />
+      <point x="401.99999999999994" y="454.0" />
+      <point x="333.7980769230769" y="454.0" />
       <point x="25.0" y="15.5" />
     </edge>
     <edge source="java2.util.SortedMap" target="java2.util.Map">
       <point x="0.0" y="-15.5" />
-      <point x="68.0" y="545.0" />
-      <point x="329.8333333333333" y="545.0" />
+      <point x="68.0" y="611.0" />
+      <point x="185.33333333333331" y="611.0" />
       <point x="-25.666666666666686" y="15.5" />
     </edge>
     <edge source="java2.util.HashMap" target="java2.util.AbstractMap">
       <point x="0.0" y="-15.5" />
-      <point x="667.0" y="621.0" />
-      <point x="405.5" y="621.0" />
+      <point x="797.0" y="687.0" />
+      <point x="550.5" y="687.0" />
       <point x="50.0" y="15.5" />
     </edge>
     <edge source="java2.util.TreeMap" target="java2.util.AbstractMap">
       <point x="25.75" y="-15.5" />
-      <point x="132.57051282051282" y="707.0" />
-      <point x="146.5" y="707.0" />
-      <point x="146.5" y="621.0" />
-      <point x="305.5" y="621.0" />
+      <point x="174.44230769230768" y="773.0" />
+      <point x="276.5" y="773.0" />
+      <point x="276.5" y="687.0" />
+      <point x="450.5" y="687.0" />
       <point x="-50.0" y="15.5" />
     </edge>
     <edge source="java2.util.TreeSet" target="java2.util.AbstractSet">
       <point x="23.5" y="-15.5" />
-      <point x="124.0" y="388.0" />
-      <point x="137.5" y="388.0" />
-      <point x="137.5" y="312.0" />
-      <point x="337.0081845238094" y="312.0" />
-      <point x="-38.66666666666674" y="15.5" />
+      <point x="124.0" y="454.0" />
+      <point x="137.49999999999994" y="454.0" />
+      <point x="137.49999999999994" y="373.0" />
+      <point x="282.33333333333337" y="373.0" />
+      <point x="-38.66666666666663" y="15.5" />
     </edge>
     <edge source="java2.util.List" target="java2.util.Collection">
       <point x="0.0" y="-15.5" />
-      <point x="771.75" y="140.0" />
-      <point x="951.8125" y="140.0" />
-      <point x="-13.375" y="15.5" />
+      <point x="839.5" y="216.0" />
+      <point x="580.125" y="216.0" />
+      <point x="13.375" y="15.5" />
     </edge>
     <edge source="java2.util.LinkedList" target="java2.util.AbstractSequentialList">
-      <point x="-26.75" y="-15.5" />
-      <point x="1042.2470238095239" y="388.0" />
-      <point x="959.5" y="388.0" />
+      <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.AbstractMap" target="java2.util.Map">
       <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java2.util.AbstractQueue" target="java2.util.AbstractCollection">
-      <point x="-34.0" y="-15.5" />
-      <point x="1295.9873511904761" y="231.0" />
-      <point x="1195.3720238095239" y="231.0" />
-      <point x="58.125" y="15.5" />
+      <point x="500.5" y="611.0" />
+      <point x="236.66666666666663" y="611.0" />
+      <point x="25.66666666666663" y="15.5" />
     </edge>
     <edge source="java2.util.PriorityQueue" target="java2.util.AbstractQueue">
       <point x="0.0" y="-15.5" />
-      <point x="1256.5" y="312.0" />
-      <point x="1329.9873511904761" y="312.0" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.Queue" target="java2.util.Collection">
       <point x="0.0" y="-15.5" />
-      <point x="1433.8623511904761" y="130.0" />
-      <point x="1005.3125" y="130.0" />
+      <point x="1193.599358974359" y="206.0" />
+      <point x="606.875" y="206.0" />
       <point x="40.125" y="15.5" />
-    </edge>
-    <edge source="java2.util.AbstractSet" target="java2.util.Set">
-      <point x="-29.0" y="-15.5" />
-      <point x="346.67485119047615" y="231.0" />
-      <point x="302.9873511904762" y="231.0" />
-      <point x="17.0" y="15.5" />
     </edge>
     <edge source="java2.util.RegularEnumSet" target="java2.util.EnumSet">
       <point x="0.0" y="-15.5" />
-      <point x="240.0" y="388.0" />
-      <point x="327.74702380952385" y="388.0" />
+      <point x="239.99999999999994" y="454.0" />
+      <point x="283.7980769230769" y="454.0" />
       <point x="-25.0" y="15.5" />
+    </edge>
+    <edge source="java2.util.AbstractSet" target="java2.util.Set">
+      <point x="-29.0" y="-15.5" />
+      <point x="292.0" y="292.0" />
+      <point x="97.5" y="292.0" />
+      <point x="17.0" y="15.5" />
     </edge>
     <edge source="java2.util.LinkedHashMap" target="java2.util.HashMap">
       <point x="0.0" y="-15.5" />
@@ -181,43 +161,33 @@
     </edge>
     <edge source="java2.util.AbstractCollection" target="java2.util.Collection">
       <point x="0.0" y="-15.5" />
-      <point x="1137.2470238095239" y="140.0" />
-      <point x="978.5625" y="140.0" />
-      <point x="13.375" y="15.5" />
-    </edge>
-    <edge source="java2.util.Hashtable" target="java2.util.Map">
-      <point x="0.0" y="-15.5" />
-      <point x="795.0" y="545.0" />
-      <point x="381.16666666666663" y="545.0" />
-      <point x="25.66666666666663" y="15.5" />
+      <point x="350.0" y="216.0" />
+      <point x="553.375" y="216.0" />
+      <point x="-13.375" y="15.5" />
     </edge>
     <edge source="java2.util.Vector" target="java2.util.AbstractList">
       <point x="0.0" y="-15.5" />
-      <point x="687.0" y="302.0" />
-      <point x="804.3005952380953" y="302.0" />
+      <point x="687.0" y="373.0" />
+      <point x="800.5" y="373.0" />
       <point x="-39.0" y="15.5" />
     </edge>
     <edge source="java2.util.Properties" target="java2.util.Hashtable">
       <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
     </edge>
+    <edge source="java2.util.Hashtable" target="java2.util.Map">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
     <edge source="java2.util.ArrayList" target="java2.util.AbstractList">
       <point x="0.0" y="-15.5" />
-      <point x="801.0" y="312.0" />
-      <point x="843.3005952380953" y="312.0" />
-      <point x="0.0" y="15.5" />
+      <point x="998.0" y="373.0" />
+      <point x="878.5" y="373.0" />
+      <point x="39.0" y="15.5" />
     </edge>
     <edge source="java2.util.Stack" target="java2.util.Vector">
       <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java2.util.ArrayDeque" target="java2.util.AbstractCollection">
-      <point x="-29.75" y="-15.5" />
-      <point x="1370.75" y="302.0" />
-      <point x="1153.7470238095239" y="302.0" />
-      <point x="1153.7470238095239" y="231.0" />
-      <point x="1156.6220238095239" y="231.0" />
-      <point x="19.375" y="15.5" />
     </edge>
     <edge source="java2.util.NavigableMap" target="java2.util.SortedMap">
       <point x="0.0" y="-15.5" />
@@ -229,70 +199,56 @@
     </edge>
     <edge source="java2.util.Deque" target="java2.util.Queue">
       <point x="0.0" y="-15.5" />
-      <point x="1503.7373511904761" y="231.0" />
-      <point x="1455.8623511904761" y="231.0" />
+      <point x="1276.5" y="292.0" />
+      <point x="1215.599358974359" y="292.0" />
       <point x="22.0" y="15.5" />
     </edge>
     <edge source="java2.util.AbstractSequentialList" target="java2.util.AbstractList">
-      <point x="5.6843418860808015E-14" y="-15.5" />
-      <point x="959.5" y="312.0" />
-      <point x="882.3005952380953" y="312.0" />
-      <point x="39.0" y="15.5" />
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.TreeSet" target="java2.util.NavigableSet">
       <point x="-23.5" y="-15.5" />
-      <point x="77.0" y="388.0" />
-      <point x="63.5" y="388.0" />
+      <point x="77.0" y="454.0" />
+      <point x="63.5" y="454.0" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.TreeMap" target="java2.util.NavigableMap">
       <point x="-25.75" y="-15.5" />
-      <point x="81.07051282051282" y="707.0" />
-      <point x="68.0" y="707.0" />
+      <point x="122.94230769230768" y="773.0" />
+      <point x="68.0" y="773.0" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.EnumSet" target="java2.util.AbstractSet">
-      <point x="0.0" y="-15.5" />
-      <point x="352.74702380952385" y="312.0" />
-      <point x="375.67485119047615" y="312.0" />
+      <point x="5.6843418860808015E-14" y="-15.5" />
+      <point x="308.79807692307696" y="373.0" />
+      <point x="321.0" y="373.0" />
       <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="java2.util.AbstractList" target="java2.util.AbstractCollection">
-      <point x="29.25" y="-15.5" />
-      <point x="872.5505952380953" y="231.0" />
-      <point x="1117.8720238095239" y="231.0" />
-      <point x="-19.375" y="15.5" />
     </edge>
     <edge source="java2.util.EnumMap" target="java2.util.AbstractMap">
       <point x="0.0" y="-15.5" />
-      <point x="211.5" y="631.0" />
-      <point x="330.5" y="631.0" />
-      <point x="-25.0" y="15.5" />
+      <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.AbstractSet" target="java2.util.AbstractCollection">
       <point x="29.0" y="-15.5" />
-      <point x="404.67485119047615" y="221.0" />
-      <point x="1079.1220238095239" y="221.0" />
-      <point x="-58.125" y="15.5" />
+      <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.ArrayDeque" target="java2.util.Deque">
-      <point x="29.75" y="-15.5" />
-      <point x="1430.25" y="312.0" />
-      <point x="1503.7373511904761" y="312.0" />
+      <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.AbstractList" target="java2.util.List">
-      <point x="-29.25" y="-15.5" />
-      <point x="814.0505952380953" y="211.0" />
-      <point x="771.75" y="211.0" />
+      <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
     </edge>
     <edge source="java2.util.WeakHashMap" target="java2.util.AbstractMap">
       <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
+      <point x="356.5" y="697.0" />
+      <point x="475.5" y="697.0" />
+      <point x="-25.0" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="778.0" y="382.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="618.0" y="414.5" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>

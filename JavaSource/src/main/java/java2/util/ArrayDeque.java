@@ -84,7 +84,7 @@ import java.util.function.Consumer;
  * @author Josh Bloch and Doug Lea
  * @since 1.6
  */
-public class ArrayDeque<E> extends AbstractCollection<E>
+public class ArrayDeque<E>
         implements Deque<E>, Cloneable, Serializable {
     /**
      * The array in which the elements of the deque are stored.
