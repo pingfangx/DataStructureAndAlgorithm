@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="67.0" y="1013.0">java.util.Properties</node>
+    <node x="121.0" y="0.0">java.util.Dictionary</node>
+    <node x="0.0" y="242.0">java.util.Hashtable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.Hashtable" target="java.util.Dictionary">
+      <point x="0.0" y="-360.5" />
+      <point x="0.0" y="96.0" />
+    </edge>
+    <edge source="java.util.Properties" target="java.util.Hashtable">
+      <point x="0.0" y="-188.0" />
+      <point x="0.0" y="360.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="680.0" />
+  <SelectedNodes>
+    <node>java.util.Dictionary</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
