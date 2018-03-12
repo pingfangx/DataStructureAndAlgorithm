@@ -241,6 +241,9 @@ public class EnumMap<K extends Enum<K>, V> extends AbstractMap<K, V>
      * distinguish these two cases.
      */
     public V get(Object key) {
+        //先校验 key
+        //求 index 并取出值
+        //unmaskNull
         return (isValidKey(key) ?
                 unmaskNull(vals[((Enum<?>) key).ordinal()]) : null);
     }
@@ -261,10 +264,12 @@ public class EnumMap<K extends Enum<K>, V> extends AbstractMap<K, V>
      * @throws NullPointerException if the specified key is null
      */
     public V put(K key, V value) {
+        //检查类型
         typeCheck(key);
 
         int index = key.ordinal();
         Object oldValue = vals[index];
+        //处理使支持 null 值
         vals[index] = maskNull(value);
         if (oldValue == null)
             size++;

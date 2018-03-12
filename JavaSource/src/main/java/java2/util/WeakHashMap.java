@@ -173,6 +173,7 @@ public class WeakHashMap<K, V>
 
     /**
      * Reference queue for cleared WeakEntries
+     * 已清除的 WeakEntries 的引用队列
      */
     private final ReferenceQueue<Object> queue = new ReferenceQueue<>();
 
@@ -290,6 +291,11 @@ public class WeakHashMap<K, V>
      * critical because HashMap uses power-of-two length hash tables, that
      * otherwise encounter collisions for hashCodes that do not differ
      * in lower bits.
+     * <p>
+     * 获取对象的哈希码，并对结果应用附加的哈希方法，以防范质量差的哈希函数（生成质量差的哈希码）。
+     * 这是至关重要的，因为 HashMap 使用 2 的幂的长度的哈希表，否则碰到在没有在低位不同的 hashCodes 的冲突。
+     * 好难翻译，应该是说，应用附加的哈希方法（即下面的 >>> ）是有必要的，
+     * 否则如果遇到没有在低位不同（只在高位不同）就很不好。（见 HashMap 中的 spreads (XORs) higher bits of hash to lower）
      */
     final int hash(Object k) {
         int h = k.hashCode();
@@ -297,6 +303,8 @@ public class WeakHashMap<K, V>
         // This function ensures that hashCodes that differ only by
         // constant multiples at each bit position have a bounded
         // number of collisions (approximately 8 at default load factor).
+        //该函数确保在每个比特位置上仅以恒定倍数不同的散列码具有有限数量的冲突（在默认加载因子下约为8）。
+        //这里不太理解
         h ^= (h >>> 20) ^ (h >>> 12);
         return h ^ (h >>> 7) ^ (h >>> 4);
     }
@@ -310,6 +318,7 @@ public class WeakHashMap<K, V>
 
     /**
      * Expunges stale entries from the table.
+     * 从表格中删除旧的条目。
      */
     private void expungeStaleEntries() {
         for (Object x; (x = queue.poll()) != null; ) {
@@ -320,6 +329,7 @@ public class WeakHashMap<K, V>
 
                 Entry<K, V> prev = table[i];
                 Entry<K, V> p = prev;
+                //移除 e
                 while (p != null) {
                     Entry<K, V> next = p.next;
                     if (p == e) {

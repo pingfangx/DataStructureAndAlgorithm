@@ -215,20 +215,26 @@ public class LinkedHashMap<K, V>
     // internal utilities
 
     // link at the end of list
+    //链接在列表的末尾
     private void linkNodeLast(LinkedHashMap.Entry<K, V> p) {
         LinkedHashMap.Entry<K, V> last = tail;
         tail = p;
         if (last == null)
+            // last 为 null
             head = p;
         else {
+            //否则将 p 接到 last 之后
             p.before = last;
             last.after = p;
         }
     }
 
     // apply src's links to dst
+    // 将src的链接应用于dst
     private void transferLinks(LinkedHashMap.Entry<K, V> src,
                                LinkedHashMap.Entry<K, V> dst) {
+        //首先将 des 的前后置为 src 的前后
+        //然后 des 的前后也要判断是否要指向 des
         LinkedHashMap.Entry<K, V> b = dst.before = src.before;
         LinkedHashMap.Entry<K, V> a = dst.after = src.after;
         if (b == null)
@@ -251,6 +257,7 @@ public class LinkedHashMap<K, V>
     Node<K, V> newNode(int hash, K key, V value, Node<K, V> e) {
         LinkedHashMap.Entry<K, V> p =
                 new LinkedHashMap.Entry<K, V>(hash, key, value, e);
+        //新建一个节点,添加到最后
         linkNodeLast(p);
         return p;
     }
@@ -277,6 +284,7 @@ public class LinkedHashMap<K, V>
     }
 
     void afterNodeRemoval(Node<K, V> e) { // unlink
+        //断开链接
         LinkedHashMap.Entry<K, V> p =
                 (LinkedHashMap.Entry<K, V>) e, b = p.before, a = p.after;
         p.before = p.after = null;
@@ -291,6 +299,8 @@ public class LinkedHashMap<K, V>
     }
 
     void afterNodeInsertion(boolean evict) { // possibly remove eldest
+        // evict 是赶出的意思,从构造函数传 false 过来
+        //可以看到它参与到是否移除旧的 entry 的判断中
         LinkedHashMap.Entry<K, V> first;
         if (evict && (first = head) != null && removeEldestEntry(first)) {
             K key = first.key;
@@ -299,11 +309,13 @@ public class LinkedHashMap<K, V>
     }
 
     void afterNodeAccess(Node<K, V> e) { // move node to last
+        //在访问顺序情况下,将节点移到最后
         LinkedHashMap.Entry<K, V> last;
         if (accessOrder && (last = tail) != e) {
             LinkedHashMap.Entry<K, V> p =
                     (LinkedHashMap.Entry<K, V>) e, b = p.before, a = p.after;
             p.after = null;
+            //先将 p 断开
             if (b == null)
                 head = a;
             else
@@ -312,6 +324,7 @@ public class LinkedHashMap<K, V>
                 a.before = b;
             else
                 last = b;
+            //再将 p 接到最后
             if (last == null)
                 head = p;
             else {
