@@ -2698,36 +2698,151 @@ public class HashMap<K, V> extends AbstractMap<K, V>
         A nickname for Introduction to Algorithms by Cormen, Leiserson, and Rivest
          */
 
+        /*
+        左旋
+                    pp                      pp
+                   /                       /
+                  p                       r
+                   \                     /
+                    r                   p
+                   /                     \
+                  rl                      rl
+         */
         static <K, V> TreeNode<K, V> rotateLeft(TreeNode<K, V> root,
                                                 TreeNode<K, V> p) {
             TreeNode<K, V> r, pp, rl;
             if (p != null && (r = p.right) != null) {
+                /*
+                ①将 r.left 赋给 p.right
+                        pp
+                       /
+                       p        r
+                        \
+                        rl
+                 */
                 if ((rl = p.right = r.left) != null)
                     rl.parent = p;
+
+                // ②将 p.parent 赋给 r.parent
                 if ((pp = r.parent = p.parent) == null)
+                    /* 如果 p 是 root 则把 r 置为 root
+                        r=root
+
+                      p
+                       \
+                       rl
+                     */
                     (root = r).red = false;
                 else if (pp.left == p)
+                    /*
+                    如果 p 是 pp 左节点，则 r 置为 pp 左节点
+                            pp
+                           /
+                          r
+
+                        p
+                         \
+                          rl
+                     */
                     pp.left = r;
                 else
+                    /*
+                    如果 p 是 pp 右节点，则 r 置为 pp 右节点
+
+                       pp
+                        \
+                          r
+
+                        p
+                         \
+                          rl
+                     */
                     pp.right = r;
+                /*
+                ③连接 p 和 r
+                            pp
+                           /
+                          r
+                         /
+                        p
+                         \
+                          rl
+                 */
                 r.left = p;
                 p.parent = r;
             }
             return root;
         }
 
+        /*
+        右旋
+                pp                  pp
+               /                   /
+              p                    l
+             /                      \
+            l                        p
+             \                      /
+              lr                    lr
+         */
         static <K, V> TreeNode<K, V> rotateRight(TreeNode<K, V> root,
                                                  TreeNode<K, V> p) {
             TreeNode<K, V> l, pp, lr;
             if (p != null && (l = p.left) != null) {
+                /*
+                ①将 l.right 赋给 p.left，如果 l.right 不为 null ，将其 parent 设为 p
+                        pp
+                       /
+                      p
+                  l  /
+                    lr
+                 */
                 if ((lr = p.left = l.right) != null)
                     lr.parent = p;
+                // 将 p.parent 赋给 l.parent
                 if ((pp = l.parent = p.parent) == null)
+                    /*
+                    如果 p 为 root，则 l 置为 root
+                        l
+
+                           p
+                          /
+                         lr
+                     */
                     (root = l).red = false;
                 else if (pp.right == p)
+                    /*
+                    如果 p 为 pp.right，则将 l 置为 pp.right
+                            pp
+                              \
+                              l
+
+                                 p
+                                /
+                               lr
+                     */
                     pp.right = l;
                 else
+                    /*
+                    如果 p 为 pp.left，则将 l 置为 pp.left
+                                pp
+                               /
+                              l
+
+                                p
+                               /
+                              lr
+                     */
                     pp.left = l;
+                /*
+                ③连接 p 和 l
+                            pp
+                           /
+                          l
+                           \
+                           p
+                          /
+                          lr
+                 */
                 l.right = p;
                 p.parent = l;
             }
@@ -2736,25 +2851,52 @@ public class HashMap<K, V> extends AbstractMap<K, V>
 
         static <K, V> TreeNode<K, V> balanceInsertion(TreeNode<K, V> root,
                                                       TreeNode<K, V> x) {
+            //插入节点为红
             x.red = true;
             for (TreeNode<K, V> xp, xpp, xppl, xppr; ; ) {
                 if ((xp = x.parent) == null) {
+                    //根节点，涂黑返回
                     x.red = false;
                     return x;
                 } else if (!xp.red || (xpp = xp.parent) == null)
+                    //父节点是黑的返回，或者？什么情况 xpp 为 null？还是只用来赋值？
                     return root;
+                //父节点为红
                 if (xp == (xppl = xpp.left)) {
+                    //父节点为祖父节点的左节点
                     if ((xppr = xpp.right) != null && xppr.red) {
+                        /*
+                        叔节点为红
+                        将父节点、叔节点涂黑
+                        祖父节点涂红
+                        置当前为祖父节点
+                         */
                         xppr.red = false;
                         xp.red = false;
                         xpp.red = true;
                         x = xpp;
                     } else {
+                        //父节点为红，叔节点为黑
                         if (x == xp.right) {
+                            /*
+                            当前为右结点
+                            进行左旋，以 父节点为当前节点
+                             */
                             root = rotateLeft(root, x = xp);
                             xpp = (xp = x.parent) == null ? null : xp.parent;
                         }
+                        /*
+                        else 或 左旋后都满足的情况
+                        父节点为红，叔节点为黑
+                        当前为红，是左节点
+                         */
+
                         if (xp != null) {
+                            /*
+                            将父节点涂黑,将祖父节点涂红
+                            以祖父节点为支点作右旋
+                            注意没有置当前节点，当前节点父节点已为黑，结束
+                             */
                             xp.red = false;
                             if (xpp != null) {
                                 xpp.red = true;
@@ -2763,16 +2905,29 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                         }
                     }
                 } else {
+                    //对称，父节点为右节点
                     if (xppl != null && xppl.red) {
+                        /*
+                        父节点为红，叔节点为红
+                        将父节点、叔节点涂黑
+                        祖父节点涂红
+                        置当前为祖父节点
+                         */
                         xppl.red = false;
                         xp.red = false;
                         xpp.red = true;
                         x = xpp;
                     } else {
+                        //父节点为红，叔节点为黑
                         if (x == xp.left) {
+                            //当前为左节点，置当前为父节点，进行右旋
                             root = rotateRight(root, x = xp);
                             xpp = (xp = x.parent) == null ? null : xp.parent;
                         }
+                        /*
+                        else 或 右旋后，当前为右节点，父为红，叔为黑
+                        将父涂黑，将祖父涂红，祖父为支点进行左旋
+                         */
                         if (xp != null) {
                             xp.red = false;
                             if (xpp != null) {
@@ -2789,30 +2944,51 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                                                      TreeNode<K, V> x) {
             for (TreeNode<K, V> xp, xpl, xpr; ; ) {
                 if (x == null || x == root)
+                    //根节点
                     return root;
                 else if ((xp = x.parent) == null) {
+                    //涂黑
                     x.red = false;
                     return x;
                 } else if (x.red) {
+                    //如果是红，说明移走的是黑，涂黑即可
                     x.red = false;
                     return root;
                 } else if ((xpl = xp.left) == x) {
+                    //为黑，为左节点
                     if ((xpr = xp.right) != null && xpr.red) {
+                        /*
+                        兄弟节点为红
+                        说明父节点为黑，兄第节点的子节点为黑
+                        将父节点涂红，兄弟节点涂黑
+                        以父节点为支点左旋后，兄弟节点的左节点变为当前节点的兄弟节点（为黑）
+                         */
                         xpr.red = false;
                         xp.red = true;
                         root = rotateLeft(root, xp);
                         xpr = (xp = x.parent) == null ? null : xp.right;
                     }
+                    //兄弟节点为黑
                     if (xpr == null)
                         x = xp;
                     else {
                         TreeNode<K, V> sl = xpr.left, sr = xpr.right;
                         if ((sr == null || !sr.red) &&
                                 (sl == null || !sl.red)) {
+                            /*
+                            兄弟节点的子节点均为黑，将兄弟节点涂红
+                            当前节点置为父节点
+                             */
                             xpr.red = true;
                             x = xp;
                         } else {
                             if (sr == null || !sr.red) {
+                                /*
+                                兄弟节点的右节点为黑，兄弟节点左节点为红
+                                将兄弟节点的左节点涂黑，兄弟节点涂红
+                                以兄弟节点为支点右旋
+                                右旋后，原兄弟结点的左结点变为当前节点的兄弟节点（为黑，且右节点为红）
+                                 */
                                 if (sl != null)
                                     sl.red = false;
                                 xpr.red = true;
@@ -2820,6 +2996,14 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                                 xpr = (xp = x.parent) == null ?
                                         null : xp.right;
                             }
+                            /*
+                            兄弟结点的右节点为红
+                            将兄弟节点涂为父节点的颜色
+                            兄弟节点的右节点涂黑
+                            父节点涂黑
+                            然后以父节点为支点左旋
+                            左旋后原兄弟节点成为，原父节点（黑）和原兄弟结点的右节点（为黑）的父节点
+                             */
                             if (xpr != null) {
                                 xpr.red = (xp == null) ? false : xp.red;
                                 if ((sr = xpr.right) != null)
@@ -2833,7 +3017,13 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                         }
                     }
                 } else { // symmetric
+                    //当前节点为黑，为右节点
                     if (xpl != null && xpl.red) {
+                        /*
+                        左兄弟节点为红，说明父节点及左节点的子节点均为黑
+                        将左节点涂黑，父节点涂红，以父节点为支点右旋
+                        右旋后原兄弟节点的右节点（黑）成为新的左兄弟节点
+                         */
                         xpl.red = false;
                         xp.red = true;
                         root = rotateRight(root, xp);
@@ -2842,13 +3032,22 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                     if (xpl == null)
                         x = xp;
                     else {
+                        //左兄弟点为黑
                         TreeNode<K, V> sl = xpl.left, sr = xpl.right;
                         if ((sl == null || !sl.red) &&
                                 (sr == null || !sr.red)) {
+                            //左兄弟结点的子节点均为黑，将左兄弟结点涂黑
+                            //当前节点置为父节点（如果为红会在下一次被置黑）
                             xpl.red = true;
                             x = xp;
                         } else {
                             if (sl == null || !sl.red) {
+                                /*
+                                左兄弟节点为黑，左兄弟节点的左节点为黑，
+                                将左兄弟涂红，兄弟的右节点涂黑，左兄弟左旋
+                                左旋后原左兄弟的右节点（为黑）成为左兄弟
+                                原左兄弟成为左兄弟的左节点（为红）
+                                 */
                                 if (sr != null)
                                     sr.red = false;
                                 xpl.red = true;
@@ -2856,6 +3055,12 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                                 xpl = (xp = x.parent) == null ?
                                         null : xp.left;
                             }
+                            /*
+                            左兄弟为黑，左兄弟的左节点为红
+                            左兄弟涂为父节点颜色
+                            左兄弟的左节点涂黑，父节点涂黑，父节点右旋
+                            右旋后原左兄弟成为，原左兄弟的左节点（黑）和原父节点（黑）的父节点
+                             */
                             if (xpl != null) {
                                 xpl.red = (xp == null) ? false : xp.red;
                                 if ((sl = xpl.left) != null)
