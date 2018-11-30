@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Algorithm_main" target="1.8" />
       <module name="Algorithm_test" target="1.8" />
+      <module name="ByteCode_main" target="1.8" />
+      <module name="ByteCode_test" target="1.8" />
       <module name="DataStructureAndAlgorithm_main" target="1.8" />
       <module name="DataStructureAndAlgorithm_test" target="1.8" />
       <module name="DataStructureBook_main" target="1.8" />
