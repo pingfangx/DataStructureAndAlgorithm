@@ -990,13 +990,20 @@ public class HashMap<K, V> extends AbstractMap<K, V>
             } else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
                     oldCap >= DEFAULT_INITIAL_CAPACITY)
                 //这里的 oldCap >= 不成立可能发生于?
+                //可能发生于通过构造函数设置的初始容量小于16，比如为 8，
                 //1
                 newThr = oldThr << 1; // double threshold
         } else if (oldThr > 0) // initial capacity was placed in threshold
             //已经配置了 threshold
             //2
+            //带参数的两个构造函数
+            // this.loadFactor = loadFactor;
+            // this.threshold = tableSizeFor(initialCapacity);
+            // 可以看到 threshold 并不是用来作为阈值，而是暂时存储初始容量
             newCap = oldThr;
         else {               // zero initial threshold signifies using defaults
+
+            //无参构造函数，首次添加时会实始化，只设置了 this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
             newCap = DEFAULT_INITIAL_CAPACITY;
             newThr = (int) (DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
         }
