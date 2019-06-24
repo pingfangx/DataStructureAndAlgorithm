@@ -3,4 +3,6 @@ include 'DataStructureBook'
 include 'JavaSource'
 include 'Algorithm'
 include 'ByteCode'
+include 'lib:ReactiveX'
+findProject(':lib:ReactiveX')?.name = 'ReactiveX'
 
