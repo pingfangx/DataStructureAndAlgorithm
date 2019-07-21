@@ -2477,6 +2477,8 @@ public class HashMap<K, V> extends AbstractMap<K, V>
         /**
          * Tree version of putVal.
          * 树版本的 putVal .
+         *
+         * @param h hash
          */
         final TreeNode<K, V> putTreeVal(HashMap<K, V> map, Node<K, V>[] tab,
                                         int h, K k, V v) {
@@ -2487,10 +2489,13 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                 int dir, ph;
                 K pk;
                 if ((ph = p.hash) > h)
+                    //p 的 hash 比 h 大,目标在左边
                     dir = -1;
                 else if (ph < h)
+                    //目标在右边
                     dir = 1;
                 else if ((pk = p.key) == k || (k != null && k.equals(pk)))
+                    // hash 相等，key 相等，返回 p
                     return p;
                 else if ((kc == null &&
                         (kc = comparableClassFor(k)) == null) ||
@@ -2510,6 +2515,7 @@ public class HashMap<K, V> extends AbstractMap<K, V>
 
                 TreeNode<K, V> xp = p;
                 if ((p = (dir <= 0) ? p.left : p.right) == null) {
+                    //如果没有所查找方向的子结点，说明没有找到目标，新建一个树结点
                     Node<K, V> xpn = xp.next;
                     TreeNode<K, V> x = map.newTreeNode(h, k, v, xpn);
                     if (dir <= 0)
@@ -2856,6 +2862,9 @@ public class HashMap<K, V> extends AbstractMap<K, V>
             return root;
         }
 
+        /**
+         * 平衡插入
+         */
         static <K, V> TreeNode<K, V> balanceInsertion(TreeNode<K, V> root,
                                                       TreeNode<K, V> x) {
             //插入节点为红
@@ -2868,32 +2877,35 @@ public class HashMap<K, V> extends AbstractMap<K, V>
                 } else if (!xp.red || (xpp = xp.parent) == null)
                     //父节点是黑的返回，或者？什么情况 xpp 为 null？还是只用来赋值？
                     return root;
-                //父节点为红
+                //父节点为红，此时祖父结点黑，考虑叔结点的情况
                 if (xp == (xppl = xpp.left)) {
                     //父节点为祖父节点的左节点
                     if ((xppr = xpp.right) != null && xppr.red) {
                         /*
                         叔节点为红
+                        此时的情况为当前为红，父为红，叔为红，祖父为黑
                         将父节点、叔节点涂黑
                         祖父节点涂红
-                        置当前为祖父节点
+                        置当前为祖父节点，回溯
                          */
                         xppr.red = false;
                         xp.red = false;
                         xpp.red = true;
                         x = xpp;
                     } else {
-                        //父节点为红，叔节点为黑
+                        //父节点为红，叔节点为黑，考虑两种左情况
                         if (x == xp.right) {
                             /*
                             当前为右结点
-                            进行左旋，以 父节点为当前节点
+                            左右
+                            先进行左旋，以 父节点为当前节点
                              */
                             root = rotateLeft(root, x = xp);
                             xpp = (xp = x.parent) == null ? null : xp.parent;
                         }
                         /*
                         else 或 左旋后都满足的情况
+                        左左
                         父节点为红，叔节点为黑
                         当前为红，是左节点
                          */
