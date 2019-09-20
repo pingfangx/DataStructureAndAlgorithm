@@ -25,5 +25,14 @@ public class UnsignedNumberTest {
         System.out.println("a_U value is " + a_U);
         System.out.println("a_U unsignedString is " + Integer.toUnsignedString(a_U));
         System.out.println("a_U * 2 - 10 unsignedString is " + Integer.toUnsignedString(a_U * 2 - 10));
+
+
+        a = -1;
+        System.out.println(a);
+        System.out.println(Integer.toUnsignedString(a));
+
+        a = Integer.MAX_VALUE;
+        System.out.println(a * 2);
+        System.out.println(Integer.toUnsignedString(a * 2));
     }
 }
