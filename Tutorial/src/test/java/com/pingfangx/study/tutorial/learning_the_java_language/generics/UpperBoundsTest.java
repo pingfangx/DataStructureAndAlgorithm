@@ -1,5 +1,6 @@
 package com.pingfangx.study.tutorial.learning_the_java_language.generics;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,5 +9,8 @@ import java.util.List;
  */
 public class UpperBoundsTest {
     private void test(List<? extends Number> list) {
+    }
+
+    private void testInterface(List<? extends Serializable> list) {
     }
 }

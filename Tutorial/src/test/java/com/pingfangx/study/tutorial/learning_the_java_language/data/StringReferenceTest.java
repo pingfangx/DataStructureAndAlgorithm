@@ -35,4 +35,22 @@ public class StringReferenceTest {
         Assert.assertSame(abc, d);
         Assert.assertNotSame(abc, e);
     }
+
+    @Test
+    public void test_reference() {
+        String a = "1";
+        String b = "1";
+        //a b 引用的地址相同
+        Assert.assertSame(a, b);
+        //新建对象，地址不再相同
+        Assert.assertNotSame(a, new String("1"));
+        a = "2";
+        //b 不变，它仍引用原来的地址，而 a 引用了新的地址
+        Assert.assertEquals("1", b);
+
+        b = a;
+        a = "3";
+        //一样，b = a 只是引用相同的地址，重新赋值 a 不影响 b 的地址
+        Assert.assertEquals("2", b);
+    }
 }

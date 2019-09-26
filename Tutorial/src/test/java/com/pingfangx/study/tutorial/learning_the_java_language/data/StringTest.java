@@ -99,4 +99,12 @@ public class StringTest {
     private void print(String prefix, char a, char b, char c) {
         System.out.printf("%s %c,%c,%c %d,%d,%d%n", prefix, a, b, c, (int) a, (int) b, (int) c);
     }
+
+    @Test
+    public void test_trim() {
+        System.out.println("a" == "a");//true
+        System.out.println("a" == new String("a"));//false
+        System.out.println("a" == "a".trim());//true
+        System.out.println("a" == " a".trim());//false
+    }
 }
