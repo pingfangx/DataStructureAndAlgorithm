@@ -1,4 +1,4 @@
-package com.pingfangx.study.tutorial.reflect;
+package com.pingfangx.study.tutorial.reflect.method;
 
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
  * @author pingfangx
  * @date 2019/5/30
  */
-public class MethodTest {
+public class MethodVarArgsTest {
     public void varArgs(String... args) {
         System.out.println(args.getClass());
     }
