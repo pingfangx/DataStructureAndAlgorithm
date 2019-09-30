@@ -1,4 +1,4 @@
-package com.pingfangx.study.tutorial.extra.generics;
+package com.pingfangx.study.tutorial.generics;
 
 import java.util.ArrayList;
 import java.util.List;
