@@ -6,6 +6,8 @@
       <module name="DataStructureAndAlgorithm_test" target="1.8" />
       <module name="DataStructureBook_main" target="1.8" />
       <module name="DataStructureBook_test" target="1.8" />
+      <module name="JavaBook_main" target="1.8" />
+      <module name="JavaBook_test" target="1.8" />
       <module name="JavaSource_main" target="1.8" />
       <module name="JavaSource_test" target="1.8" />
       <module name="Tutorial_main" target="1.8" />
