@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="16.0" y="228.0">java.util.concurrent.RunnableFuture</node>
+    <node x="266.0" y="0.0">java.util.concurrent.Executor</node>
+    <node x="231.0" y="152.0">java.util.concurrent.ThreadPoolExecutor</node>
+    <node x="208.0" y="228.0">java.util.concurrent.ThreadPoolExecutor.Worker</node>
+    <node x="30.0" y="304.0">java.util.concurrent.FutureTask</node>
+    <node x="0.0" y="375.0">java.util.concurrent.Callable</node>
+    <node x="111.0" y="152.0">java.lang.Runnable</node>
+    <node x="0.0" y="152.0">java.util.concurrent.Future</node>
+    <node x="241.5" y="76.0">java.util.concurrent.ExecutorService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.FutureTask" target="java.util.concurrent.RunnableFuture">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.ExecutorService">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.Worker" target="java.util.concurrent.ThreadPoolExecutor">
+      <point x="21.5" y="-13.0" />
+      <point x="272.5" y="203.0" />
+      <point x="316.0" y="203.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.lang.Runnable">
+      <point x="35.5" y="-13.0" />
+      <point x="122.5" y="203.0" />
+      <point x="136.0" y="203.0" />
+      <point x="-25.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.RunnableFuture" target="java.util.concurrent.Future">
+      <point x="-35.5" y="-13.0" />
+      <point x="51.5" y="203.0" />
+      <point x="43.0" y="203.0" />
+      <point x="0.0" y="13.0" />
+    </edge>
+    <edge source="java.util.concurrent.ThreadPoolExecutor.Worker" target="java.lang.Runnable">
+      <point x="-21.5" y="-13.0" />
+      <point x="229.5" y="203.0" />
+      <point x="186.0" y="203.0" />
+      <point x="25.0" y="13.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="83.0" y="210.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

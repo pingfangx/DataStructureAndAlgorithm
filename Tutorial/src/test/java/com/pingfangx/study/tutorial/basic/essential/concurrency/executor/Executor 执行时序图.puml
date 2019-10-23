@@ -1,0 +1,57 @@
+@startuml
+==execute==
+ExecutorService -> Runnable:new
+Runnable --> ExecutorService
+ExecutorService -> ThreadPoolExecutor:execute(Runnable command)
+
+note right
+1
+        if (workerCountOf(c) < corePoolSize) {
+            if (addWorker(command, true))
+                return;
+            c = ctl.get();
+        }
+2
+        if (isRunning(c) && workQueue.offer(command)) {
+            int recheck = ctl.get();
+            if (! isRunning(recheck) && remove(command))
+                reject(command);
+            else if (workerCountOf(recheck) == 0)
+                addWorker(null, false);
+        }
+3
+        else if (!addWorker(command, false))
+            reject(command);
+end note
+
+ThreadPoolExecutor -> ThreadPoolExecutor:addWorker(Runnable firstTask, boolean core)
+participant "ThreadPoolExecutor.Worker" as Worker
+create Worker
+ThreadPoolExecutor -> Worker:new
+
+create ThreadFactory
+Worker -> ThreadFactory
+ThreadFactory ->Thread:newThread(Runnable r)
+Thread --> Worker:thread
+Worker --> ThreadPoolExecutor
+
+ThreadPoolExecutor -> Thread:t.start()
+Thread -> Worker:work.run()
+Worker -> ThreadPoolExecutor:runWorker()
+note left
+while (task != null || (task = getTask()) != null)
+end note
+ThreadPoolExecutor -> Runnable:task.run()
+
+ThreadPoolExecutor -> ThreadPoolExecutor:getTask()
+ThreadPoolExecutor -> Runnable:task.run()
+
+
+==submit==
+ExecutorService -> Callable
+Callable --> ExecutorService
+ExecutorService -> AbstractExecutorService:submit(Callable<T> task)
+AbstractExecutorService -> FutureTask
+FutureTask --> AbstractExecutorService
+AbstractExecutorService -> ThreadPoolExecutor:execute()
+@enduml
