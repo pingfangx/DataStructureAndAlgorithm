@@ -1,6 +1,8 @@
 rootProject.name = 'DataStructureAndAlgorithm'
 include 'DataStructureBook'
+include 'JavaBook'
 include 'JavaSource'
+include 'Tutorial'
 include 'Algorithm'
 include 'ByteCode'
 include 'lib:ReactiveX'

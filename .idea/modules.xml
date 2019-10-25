@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm.iml" group="DataStructureAndAlgorithm/Algorithm" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm/Algorithm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm/Algorithm_main.iml" group="DataStructureAndAlgorithm/Algorithm" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algorithm/Algorithm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algorithm/Algorithm_test.iml" group="DataStructureAndAlgorithm/Algorithm" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ByteCode.iml" filepath="$PROJECT_DIR$/.idea/modules/ByteCode.iml" group="DataStructureAndAlgorithm/ByteCode" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ByteCode/ByteCode_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ByteCode/ByteCode_main.iml" group="DataStructureAndAlgorithm/ByteCode" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ByteCode/ByteCode_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ByteCode/ByteCode_test.iml" group="DataStructureAndAlgorithm/ByteCode" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm.iml" group="DataStructureAndAlgorithm" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_main.iml" group="DataStructureAndAlgorithm" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureAndAlgorithm_test.iml" group="DataStructureAndAlgorithm" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook.iml" group="DataStructureAndAlgorithm/DataStructureBook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_main.iml" group="DataStructureAndAlgorithm/DataStructureBook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/DataStructureBook/DataStructureBook_test.iml" group="DataStructureAndAlgorithm/DataStructureBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBook.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBook.iml" group="DataStructureAndAlgorithm/JavaBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBook/JavaBook_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBook/JavaBook_main.iml" group="DataStructureAndAlgorithm/JavaBook" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaBook/JavaBook_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaBook/JavaBook_test.iml" group="DataStructureAndAlgorithm/JavaBook" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource.iml" group="DataStructureAndAlgorithm/JavaSource" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" group="JavaSource" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_main.iml" group="DataStructureAndAlgorithm/JavaSource" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaSource/JavaSource_test.iml" group="DataStructureAndAlgorithm/JavaSource" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ReactiveX.iml" filepath="$PROJECT_DIR$/.idea/modules/ReactiveX.iml" group="DataStructureAndAlgorithm/lib/ReactiveX" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/ReactiveX/ReactiveX_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/ReactiveX/ReactiveX_main.iml" group="DataStructureAndAlgorithm/lib/ReactiveX" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/ReactiveX/ReactiveX_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/ReactiveX/ReactiveX_test.iml" group="DataStructureAndAlgorithm/lib/ReactiveX" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/lib.iml" group="DataStructureAndAlgorithm/lib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tutorial.iml" filepath="$PROJECT_DIR$/.idea/modules/Tutorial.iml" group="DataStructureAndAlgorithm/Tutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tutorial/Tutorial_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Tutorial/Tutorial_main.iml" group="DataStructureAndAlgorithm/Tutorial" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tutorial/Tutorial_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Tutorial/Tutorial_test.iml" group="DataStructureAndAlgorithm/Tutorial" />
     </modules>
   </component>
 </project>
