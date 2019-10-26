@@ -1,0 +1,109 @@
+@startuml
+participant "HashMap()" as object
+--> object:
+note left of object
+时序图一般用来表示类之间的调用
+觉得这里用来表示方法也可以，于是尝试一下
+消息就表示参数
+返回消息表示返回结果
+构建 eqauals 为 false 但 hash 冲实的元素依次添加
+end note
+
+note left of object
+    public HashMap() {
+        this.loadFactor = DEFAULT_LOAD_FACTOR;
+    }
+end note
+
+object -> "put(K key, V value)" as put:第 1 次添加
+put -> "hash(Object key)" as hash:hash(key)
+hash -> hash: Object.hashCode()
+hash --> put:hash
+
+put -> "putVal(hash,key,value,onlyIfAbsent,evict)" as putVal:putVal(hash(key), key, value, false, true);
+
+putVal -> "resize()" as resize: if ((tab = table) == null || (n = tab.length) == 0)\nn = (tab = resize()).length;
+
+resize -> "Node[]" as table:(Node<K,V>[])new Node[newCap];
+note over resize,table
+        else {               // zero initial threshold signifies using defaults
+            newCap = DEFAULT_INITIAL_CAPACITY;// 16
+            // 16 * 0.75 = 12
+            newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+        }
+
+            Node<K,V>[] newTab = (Node<K,V>[])new Node[newCap];
+end note
+
+table --> resize
+resize --> putVal:table n=16
+
+putVal ->"newNode(hash,key,value,next)" as newNode:tab[i] = newNode(hash, key, value, null);
+newNode --> putVal:return new Node<>(hash, key, value, next);
+
+putVal --> resize:// 添加后 size 为 1\nif (++size > threshold)\n    resize();
+
+object -> put:第 2 次添加
+put -> putVal
+putVal -> table:if ((p = tab[i = (n - 1) & hash]) == null) // 取出 p
+table --> putVal:p
+putVal -> newNode:p.next = newNode(hash, key, value, null);
+note right of putVal
+            // hash 相等，但 equals 为 false
+            if (p.hash == hash &&
+                ((k = p.key) == key || (key != null && key.equals(k))))
+                e = p;
+            else if (p instanceof TreeNode)
+                e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
+            else {
+                for (int binCount = 0; ; ++binCount) {
+                    if ((e = p.next) == null) {
+                        p.next = newNode(hash, key, value, null);
+                        if (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st
+                            treeifyBin(tab, hash);
+                        break;
+                    }
+                    if (e.hash == hash &&
+                        ((k = e.key) == key || (key != null && key.equals(k))))
+                        break;
+                    p = e;
+                }
+            }
+end note
+
+putVal --> "treeifyBin(tab,hash)" as treeifyBin
+
+object -> put:第 9 次添加
+put -> putVal
+putVal -> treeifyBin: // 此循环中 binCount=7，实际大小为 8 添加一个后为 9 \nif (binCount >= TREEIFY_THRESHOLD - 1) // -1 for 1st\ntreeifyBin(tab, hash);
+treeifyBin -> resize : if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY) \n  resize();
+note left
+    如果没有达到最小树化容量 64
+    容量 16 -> 32
+end note
+
+object -> put:第 10 次添加
+put --> resize
+note left of resize
+    与上一次一样，由于小于 64，resize
+    容量变为 32 -> 64
+end note
+
+object -> put : 第 11 次添加
+put -> putVal
+putVal -> treeifyBin
+treeifyBin -> "replacementTreeNode(p,next)" as TreeNode
+TreeNode -> treeifyBin : return new TreeNode<>
+treeifyBin ->"treeify(tab)" as treeify
+note right of treeifyBin
+    将 e = tab[index = (n - 1) & hash] 中的结点链表
+    通过 replacementTreeNode 替换为一个树结点的链表
+    然后调用 treeify
+end note
+treeify -> "moveRootToFront(tab,root)" as moveRootToFront:moveRootToFront(tab, root);
+
+object -> put:第 12 次添加
+put -> putVal
+putVal -> "putTreeVal(map,tab,h,k,v)" as putTreeVal: else if (p instanceof TreeNode) \n    e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key, value);
+putTreeVal -> moveRootToFront
+@enduml

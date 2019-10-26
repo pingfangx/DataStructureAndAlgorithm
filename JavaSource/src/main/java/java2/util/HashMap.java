@@ -970,7 +970,7 @@ public class HashMap<K, V> extends AbstractMap<K, V>
      * with a power of two offset in the new table.
      * <p>
      * 初始化或加倍表的大小。
-     * 如果为空，则根据 threshold 中保存的阀值对应的初始容量进行分配。
+     * 如果为空，则根据 threshold 中保存的阈值值对应的初始容量进行分配。
      * 否则若不为空，因为我们正在使用两次幂的扩展，所以每个桶中的元素都必须保持相同的索引，
      * 或者在新表中以 2 的幂的偏移量移动
      * <p>
